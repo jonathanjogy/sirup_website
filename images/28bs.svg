@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 629.82 389.8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        stroke: #000;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        stroke-width: 15px;
+      }
+
+      .cls-2 {
+        font-family: TimesNewRomanPS-BoldMT, 'Times New Roman';
+        font-size: 212.37px;
+        font-weight: 700;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="42.82" y1="77.11" x2="607.04" y2="321.37" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff0"/>
+      <stop offset=".48" stop-color="#fbffeb"/>
+      <stop offset="1" stop-color="#ff0"/>
+    </linearGradient>
+  </defs>
+  <g id="svg1">
+    <path class="cls-1" d="M547.5,45.03V7.5H82.32v37.53C36.88,79.24,7.5,133.64,7.5,194.9s29.38,115.66,74.82,149.88v37.53h465.18v-37.53c45.44-34.22,74.82-88.61,74.82-149.88s-29.38-115.66-74.82-149.88Z"/>
+    <text class="cls-2" transform="translate(50.53 261.89)"><tspan x="0" y="0">28 Bs.</tspan></text>
+  </g>
+</svg>
