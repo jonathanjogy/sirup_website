@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
 
 body {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
@@ -9,16 +8,16 @@ body {
 }
 
 
-.image-container {
+/*.image-container {
     position: relative; /* Ensures container can use position properties */
  /*   width: 100%;
     /*height: 500px; /* Adjust height as needed */
   /*  background-color: #f0f0f0; /* Background color for demonstration */
-} 
+/*} */
 
 
 header {
-    position: relative; /* Setzt den Kontext für die Positionierung */
+    position: relative;
     background-image: url('images/karo_2.png');
     background-repeat: repeat;
     background-size: auto;
@@ -48,23 +47,6 @@ main {
     /*padding: 20px; */
 }
 
-.price-72 {
-	position: absolute;
-	top: 30%;
-	left: 30%;
-	height: 50px;
-	transform: rotate(20deg);
-	outline: none;
-	z-index: 1;
-	opacity: 0.1;
-	transition: transform 0.1s ease-out, scale 0.2s ease-out, opacity 0.5s ease-out;
-}
-
-.price-72:hover {
-	transform: rotate(-20deg);
-	transform: scale(1.2);
-	opacity: 1;
-}
 
 
 .price-28 {
@@ -89,8 +71,8 @@ main {
 
 .leaf1 {
     position: absolute; /* Allows positioning using top, right, bottom, left properties */
-    margin-top: 150%; /* Adjust the top position */
-    margin-left: 50%; /* Adjust the left position */
+    top: 300%; /* Adjust the top position */
+    left: 50%; /* Adjust the left position */
     transform: translate(-50%, -50%); /* Centers the image within the container */
     width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
@@ -100,8 +82,8 @@ main {
 
 .leaf2 {
     position: absolute; /* Allows positioning using top, right, bottom, left properties */
-    margin-top: 10%; /* Adjust the top position */
-    margin-left: 3.5%; /* Adjust the left position */
+    top: 20%; /* Adjust the top position */
+    left: 4%; /* Adjust the left position */
     transform: translate(-50%, -50%); /* Centers the image within the container */
     width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
@@ -112,8 +94,8 @@ main {
 
 .leaf3 {
     position: absolute; /* Allows positioning using top, right, bottom, left properties */
-    margin-top: 120%; /* Adjust the top position */
-    margin-left: 95%; /* Adjust the left position */
+    top: 230%; /* Adjust the top position */
+    right: -6.5%; /* Adjust the left position */
     transform: translate(-50%, -50%); /* Centers the image within the container */
     width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
@@ -123,8 +105,8 @@ main {
 
 .leaf4 {
     position: absolute; /* Allows positioning using top, right, bottom, left properties */
-    margin-top: 100%; /* Adjust the top position */
-    margin-left: 90px; /* Adjust the left position */
+    top: 200%; /* Adjust the top position */
+    left: 5%; /* Adjust the left position */
     transform: translate(-50%, -50%); /* Centers the image within the container */
     width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
@@ -135,8 +117,8 @@ main {
 
 .leaf5 {
     position: absolute; /* Allows positioning using top, right, bottom, left properties */
-    margin-top: 35%; /* Adjust the top position */
-    margin-left: 85%; /* Adjust the left position */
+    top: 100%; /* Adjust the top position */
+    right: 0%; /* Adjust the left position */
     transform: translate(-50%, -50%); /* Centers the image within the container */
     width: 300px; /* Adjust width as needed */
 	height: auto; /* Maintain aspect ratio */
@@ -147,44 +129,102 @@ main {
 
 
 .colorflower {
-    width: 100px;  /* Breite des Bildes anpassen */
-    height: auto;  /* Seitenverhältnis beibehalten */
+    width: 100px;
+    height: auto;
 	position: absolute;
 	top: 20%;
 	left: 10%;
-    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);  /* Animation der Transformation */
-	border: none; /* Entfernt den Rand */
-    outline: none; /* Entfernt die Outline */
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	border: none;
+    outline: none;
 }
 
 .colorflower:hover {
-    transform: rotate(360deg);  /* Bild um 360 Grad drehen */
+    transform: rotate(360deg);
 }
 
 
 
-.text-container {
+
+.sirup-fam-container {
+	background: none;
+	position: relative;
+	margin-top: 10vh;
+	width: 100%;
+	height: 300px;
+}
+
+/*.sirupfam {
+	position: relative;
+	left: 1vw;
+	width: 300px;
+	height: auto;
+	filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+	transition: transform 0.6s ease-out, filter 1s ease-out; */
+/*}*/
+
+
+.sirupfam {
+	transform: translateX(50%);
+	width: 300px;
+	height: auto;
+	filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+	transition: transform 0.6s ease-out, filter 1s ease-out;
+}
+
+.sirupfam.large {
+	transform-origin: center;
+	transform: translateX(50%) scale(1.5);
+	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
+}
+
+.sirupfam:hover {
+	cursor: zoom-in;
+}
+
+/*.sirupfam:active {
+	transform-origin: center;
+	transform: scale(1.5);
+	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
+}
+
+
+.sirup-fam:hover .text-fam {
+    opacity: 1;
+    transform: translateX(0);
+}*/
+
+.price-72 {
+	position: relative;
+	top: -80%;
+	left: 1.6%;
+	width: 80px;
+	opacity: 0.1;
+	transform: rotate(20deg);
+	transition: transform 0.1s ease-out, scale 0.2s ease-out, opacity 0.5s ease-out;
+}
+
+.price-72:hover {
+	transform: rotate(-0deg) scale(1.2);
+	opacity: 1;
+}
+
+.text-fam {
+	pointer-events: none;
     opacity: 0;
-    transform: translateX(-50%); /* Standardmäßig außerhalb des Bildschirms nach links verschoben */
+	position: relative;
+    transform: translate(80%, -115%);
     border: 0px solid #ccc;
     border-radius: 4px;
     background-color: transparent;
     max-width: 400px;
-    margin: 0 auto;
-    position: absolute;
-    top: 33%;
-    left: 40%;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Verzögerung für die Bewegung und Opazität */
+    transition: transform 0.5s ease-out, opacity 0.4s;
 }
 
-/* Wenn der Hover-Effekt über das Bild aktiviert wird */
-.image-wrapper:hover .text-container {
-    opacity: 1; /* Text wird sichtbar */
-    transform: translateX(0); /* Text bewegt sich von links nach rechts in die normale Position */
+.text-fam.show {
+	opacity: 1;
+	transform: translate(115%, -115%);
 }
-
-
-
 
 #textfeld {
     font-size: 32px;
@@ -286,20 +326,6 @@ main {
     }
 }
 
-.sirupfam {
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    width: 300px;
-    height: auto;
-    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
-    transition: transform 0.6s ease-out, filter 1s ease-out;
-}
-
-.sirupfam:hover {
-    transform: scale(1.5);
-    filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
-	}
 
 
 
