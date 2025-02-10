@@ -83,7 +83,7 @@ main {
 .leaf2 {
     position: absolute; /* Allows positioning using top, right, bottom, left properties */
     top: 20%; /* Adjust the top position */
-    left: 4%; /* Adjust the left position */
+    left: 2.2%; /* Adjust the left position */
     transform: translate(-50%, -50%); /* Centers the image within the container */
     width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
@@ -106,7 +106,7 @@ main {
 .leaf4 {
     position: absolute; /* Allows positioning using top, right, bottom, left properties */
     top: 200%; /* Adjust the top position */
-    left: 5%; /* Adjust the left position */
+    left: 3%; /* Adjust the left position */
     transform: translate(-50%, -50%); /* Centers the image within the container */
     width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
@@ -129,39 +129,40 @@ main {
 
 
 .colorflower {
-    width: 100px;
+	position: fixed;
+    width: 90px;
     height: auto;
-	position: absolute;
-	top: 20%;
-	left: 10%;
-    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	bottom: 10%;
+	left: 1%;
+    transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	border: none;
     outline: none;
+	z-index: 9999;
+	filter: drop-shadow(0 0 10px rgba(255, 0, 200, 0.7));
 }
 
-.colorflower:hover {
-    transform: rotate(360deg);
+
+
+
+
+
+
+
+.colorflower.press {
+    transform: rotate(720deg);
 }
 
 
 
 
 .sirup-fam-container {
+	display: inline-block;
 	background: none;
 	position: relative;
 	margin-top: 10vh;
 	width: 100%;
 	height: 300px;
 }
-
-/*.sirupfam {
-	position: relative;
-	left: 1vw;
-	width: 300px;
-	height: auto;
-	filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
-	transition: transform 0.6s ease-out, filter 1s ease-out; */
-/*}*/
 
 
 .sirupfam {
@@ -179,20 +180,8 @@ main {
 }
 
 .sirupfam:hover {
-	cursor: zoom-in;
+	cursor: pointer;
 }
-
-/*.sirupfam:active {
-	transform-origin: center;
-	transform: scale(1.5);
-	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
-}
-
-
-.sirup-fam:hover .text-fam {
-    opacity: 1;
-    transform: translateX(0);
-}*/
 
 .price-72 {
 	position: relative;
@@ -213,7 +202,7 @@ main {
 	pointer-events: none;
     opacity: 0;
 	position: relative;
-    transform: translate(80%, -115%);
+    transform: translate(80%, -100%);
     border: 0px solid #ccc;
     border-radius: 4px;
     background-color: transparent;
@@ -223,13 +212,13 @@ main {
 
 .text-fam.show {
 	opacity: 1;
-	transform: translate(115%, -115%);
+	transform: translate(115%, -100%);
 }
 
 #textfeld {
+	text-align: center;
     font-size: 32px;
 	font-family: 'Times New Roman', Times, serif;
-	font-size: 24px;
     font-weight: bold;
     animation: colorChangered 2s infinite;
 	filter: drop-shadow(0 0 5px rgba(255, 0, 0, 1));
@@ -247,6 +236,100 @@ main {
 	font-family: 'Times New Roman', Times, serif;
 }
 
+/*=========================================================*/
+
+.sirup-famsmall-container {
+	display: inline-block;
+	background: none;
+	position: relative;
+	margin-top: -20vh;
+	width: 100%;
+	height: 300px;
+}
+
+
+.sirupfamsmal {
+	position: absolute;
+	right: 0;
+	transform: translateX(-50%);
+	width: 300px;
+	height: auto;
+	filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.5));
+	transition: transform 0.6s ease-out, filter 1s ease-out;
+}
+
+.sirupfamsmal.large {
+	transform-origin: center;
+	transform: translateX(-50%) scale(1.5);
+	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
+}
+
+.sirupfamsmal:hover {
+	cursor: pointer;
+}
+
+.price-28 {
+	position: absolute;
+	right: 0;
+	top: 0%;
+	width: 80px;
+	opacity: 0.1;
+	transition: transform 0.1s ease-out, scale 0.2s ease-out, opacity 0.5s ease-out;
+	transform: translateX(-430%) rotate(20deg);
+	z-index: 1;
+}
+
+.price-28:hover {
+	opacity: 1;
+	top: 0%;
+	transform: translateX(-430%) rotate(0deg) scale(1.2);
+}
+
+
+.text-famsmall {
+	pointer-events: none;
+    opacity: 0;
+	position: absolute;
+	right: 0%;
+	top: 0%;
+    transform: translate(-80%, 0%);
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    max-width: 400px;
+    transition: transform 0.5s ease-out, opacity 0.4s;
+	text-align: right;
+}
+
+.text-famsmall.show {
+	opacity: 1;
+	transform: translate(-120%, 0%);
+}
+
+#textfeldfamsmall1 {
+	font-size: 32px;
+	font-family: 'Times New Roman', Times, serif;
+	font-weight: bold;
+	animation: colorChangered 2s infinite;
+	filter: drop-shadow(0 0 5px rgba(255, 0, 0, 1));
+}
+#textfeldfamsmall2 {
+	font-size: 24px;
+	font-family: 'Times New Roman', Times, serif;
+}
+#textfeldfamsmall3 {
+    font-size: 32px;
+	font-family: 'Times New Roman', Times, serif;
+}
+#textfeldfamsmall4 {
+    font-size: 32px;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+
+/*=========================================================*/
+
+
 @keyframes colorChangered {
      0% {
         transform: translateX(100%); /* Startposition außerhalb der rechten Seite */
@@ -262,15 +345,15 @@ main {
     }
 }
 
-.textfeldmag {
+/*.textfeldmag {
     font-size: 24px;
     font-weight: bold;
-    animation: colorChange 2s infinite; /* Animation läuft 2 Sekunden und wiederholt sich unendlich */
+    animation: colorChange 2s infinite;
 }
 
 .text-containermag {
     opacity: 0;
-    transform: translateX(50%); /* Standardmäßig außerhalb des Bildschirms nach links verschoben */
+    transform: translateX(50%);
     border: 0px solid #ccc;
     border-radius: 4px;
     background-color: transparent;
@@ -279,13 +362,13 @@ main {
     position: absolute;
     top: 66%;
     right: 40%;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out; /* Verzögerung für die Bewegung und Opazität */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .image-wrappermag:hover .text-containermag {
-    opacity: 1; /* Text wird sichtbar */
-    transform: translateX(0); /* Text bewegt sich von links nach rechts in die normale Position */
-}
+    opacity: 1;
+    transform: translateX(0);
+} */
 
 
 
@@ -329,7 +412,7 @@ main {
 
 
 
-.sirupmag {
+/*.sirupmag {
     position: absolute;
     top: 60%;
     right: 20%;
@@ -357,16 +440,16 @@ main {
 .siruptar:hover {
     transform: scale(1.5);
     filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
-}
+} */
 
 
 
 footer {
+	position: fixed;
     text-align: center;
-    background-color: #333;
+    background-color: #A800AC;
     color: white;
     padding: 10px 0;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
@@ -381,3 +464,90 @@ footer {
     float: right; */
 
 /*}*/
+
+@media only screen and (max-width : 1531px ){
+	
+.colorflower {
+    width: 100px;
+	bottom: 1%;
+	left: 1%;
+	filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+}
+
+
+.sirupfam {
+	transform: translateX(-20%);
+	}
+
+.sirupfam.large {
+	transform-origin: center;
+	transform: translateX(-20%) scale(1.2);
+	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
+}
+
+.price-72 {
+	position: absolute;
+	top: 0%;
+	width: 80px;
+	transform: translateX(150%) rotate(20deg);
+}
+
+.price-72:hover {
+	top: 0%;
+	transform: translateX(150%) rotate(0deg) scale(1.2);
+}
+
+.text-fam {
+	position: relative;
+    transform: translate(30%, -100%);
+    max-width: 300px;
+    transition: transform 0.5s ease-out, opacity 0.4s;
+}
+
+.text-fam.show {
+	transform: translate(55%, -100%);
+}
+
+
+
+.sirupfamsmal {
+	transform: translateX(20%);
+	}
+
+.sirupfamsmal.large {
+	transform-origin: center;
+	transform: translateX(20%) scale(1.2);
+	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
+}
+
+.price-28 {
+	position: absolute;
+	right: 0%;
+	top: 0%;
+	width: 80px;
+	transform: translateX(-150%) rotate(20deg);
+}
+
+.price-28:hover {
+	top: 0%;
+	right: 0%;
+	transform: translateX(-150%) rotate(0deg) scale(1.2);
+}
+
+.text-famsmall {
+	position: absolute;
+	opacity: 0;
+	right: 0%;
+    transform: translate(-30%, 0%);
+    max-width: 300px;
+    transition: transform 0.5s ease-out, opacity 0.4s;
+}
+
+.text-famsmall.show {
+	right: 0%;
+	transform: translate(-55%, 0%);
+}
+
+
+
+}
