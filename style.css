@@ -23,6 +23,7 @@ header {
     background-size: auto;
 	background-position: center;
     height: 120px;
+	width: 100%;
     text-align: center;
     color: black;
 }
@@ -73,7 +74,6 @@ main {
     position: absolute; /* Allows positioning using top, right, bottom, left properties */
     top: 300%; /* Adjust the top position */
     left: 50%; /* Adjust the left position */
-    transform: translate(-50%, -50%); /* Centers the image within the container */
     width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
 	border: none; /* Entfernt den Rand */
@@ -81,33 +81,31 @@ main {
 }
 
 .leaf2 {
-    position: absolute; /* Allows positioning using top, right, bottom, left properties */
-    top: 20%; /* Adjust the top position */
-    left: 2.2%; /* Adjust the left position */
-    transform: translate(-50%, -50%); /* Centers the image within the container */
-    width: 200px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+	position: absolute;
+	top: 20%;
+	left: 5%;
+	width: 200px;
+	height: auto;
 	transform: rotate(-50deg);
-	border: none; /* Entfernt den Rand */
-    outline: none; /* Entfernt die Outline */
+	border: none;
+	outline: none;
+	transform-origin: left;
 }
 
 .leaf3 {
-    position: absolute; /* Allows positioning using top, right, bottom, left properties */
-    top: 230%; /* Adjust the top position */
-    right: -6.5%; /* Adjust the left position */
-    transform: translate(-50%, -50%); /* Centers the image within the container */
-    width: 200px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-	border: none; /* Entfernt den Rand */
-    outline: none; /* Entfernt die Outline */
+    position: absolute;
+    top: 230%;
+    right: 0%;
+    width: 200px;
+    height: auto;
+	border: none;
+    outline: none;
 }
 
 .leaf4 {
     position: absolute; /* Allows positioning using top, right, bottom, left properties */
     top: 200%; /* Adjust the top position */
-    left: 3%; /* Adjust the left position */
-    transform: translate(-50%, -50%); /* Centers the image within the container */
+    left: -1%; /* Adjust the left position */
     width: 200px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
 	border: none; /* Entfernt den Rand */
@@ -116,15 +114,14 @@ main {
 }
 
 .leaf5 {
-    position: absolute; /* Allows positioning using top, right, bottom, left properties */
-    top: 100%; /* Adjust the top position */
-    right: 0%; /* Adjust the left position */
-    transform: translate(-50%, -50%); /* Centers the image within the container */
-    width: 300px; /* Adjust width as needed */
-	height: auto; /* Maintain aspect ratio */
-	transform: scalex(-1); /* rotating */
-	border: none; /* Entfernt den Rand */
-    outline: none; /* Entfernt die Outline */
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    width: 300px;
+	height: auto;
+	transform: scalex(-1);
+	border: none;
+    outline: none;
 }
 
 
@@ -465,7 +462,7 @@ footer {
 
 /*}*/
 
-@media only screen and (max-width : 1531px ){
+@media only screen and (max-width : 920px ){
 	
 .colorflower {
     width: 100px;
@@ -476,12 +473,13 @@ footer {
 
 
 .sirupfam {
-	transform: translateX(-20%);
+	left: 0%;
+	transform: translateX(-10%);
 	}
 
 .sirupfam.large {
 	transform-origin: center;
-	transform: translateX(-20%) scale(1.2);
+	transform: translateX(-10%) scale(1.2);
 	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
 }
 
@@ -489,12 +487,12 @@ footer {
 	position: absolute;
 	top: 0%;
 	width: 80px;
-	transform: translateX(150%) rotate(20deg);
+	transform: translateX(210%) rotate(20deg);
 }
 
 .price-72:hover {
 	top: 0%;
-	transform: translateX(150%) rotate(0deg) scale(1.2);
+	transform: translateX(210%) rotate(0deg) scale(1.2);
 }
 
 .text-fam {
@@ -505,18 +503,18 @@ footer {
 }
 
 .text-fam.show {
-	transform: translate(55%, -100%);
+	transform: translate(70%, -100%);
 }
 
 
 
 .sirupfamsmal {
-	transform: translateX(20%);
+	transform: translateX(0%);
 	}
 
 .sirupfamsmal.large {
 	transform-origin: center;
-	transform: translateX(20%) scale(1.2);
+	transform: translateX(0%) scale(1.2);
 	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
 }
 
@@ -525,13 +523,13 @@ footer {
 	right: 0%;
 	top: 0%;
 	width: 80px;
-	transform: translateX(-150%) rotate(20deg);
+	transform: translateX(-260%) rotate(20deg);
 }
 
 .price-28:hover {
 	top: 0%;
 	right: 0%;
-	transform: translateX(-150%) rotate(0deg) scale(1.2);
+	transform: translateX(-260%) rotate(0deg) scale(1.2);
 }
 
 .text-famsmall {
@@ -545,7 +543,7 @@ footer {
 
 .text-famsmall.show {
 	right: 0%;
-	transform: translate(-55%, 0%);
+	transform: translate(-77%, 0%);
 }
 
 

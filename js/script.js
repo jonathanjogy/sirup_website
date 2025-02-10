@@ -26,10 +26,28 @@ sirupfamsmal.addEventListener('mouseout', function() {
 	textfamsmall.classList.toggle('show');
 });
 
-scrollup.addEventListener('mouseover', function () {
-	scrollup.classList.toggle('press');
-	window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+
+
+if (window.innerWidth <= 920) {
+    scrollup.addEventListener('touchstart', function () {
+        scrollup.classList.toggle('press');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+} else {
+    scrollup.addEventListener('mouseover', function () {
+        scrollup.classList.toggle('press');
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+
+
+
+
+
