@@ -93,8 +93,8 @@ main {
 }
 
 .leaf3 {
-    position: absolute;
-    top: 230%;
+    position: relative;
+    margin-top: 230%;
     right: 0%;
     width: 200px;
     height: auto;
@@ -103,14 +103,13 @@ main {
 }
 
 .leaf4 {
-    position: absolute; /* Allows positioning using top, right, bottom, left properties */
-    top: 200%; /* Adjust the top position */
-    left: -1%; /* Adjust the left position */
-    width: 200px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-	border: none; /* Entfernt den Rand */
-    outline: none; /* Entfernt die Outline */
-	
+	position: absolute;
+	top: 200%;
+	left: -1%;
+	width: 200px;
+	height: auto;
+	border: none;
+	outline: none;
 }
 
 .leaf5 {
@@ -170,13 +169,16 @@ main {
 	transition: transform 0.6s ease-out, filter 1s ease-out;
 }
 
-.sirupfam.large {
+/*.sirupfam.large {
 	transform-origin: center;
 	transform: translateX(50%) scale(1.5);
 	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
-}
+}*/
 
 .sirupfam:hover {
+	transform-origin: center;
+	transform: translateX(50%) scale(1.5);
+	filter: drop-shadow(0 0 20px rgba(255, 255, 0, 1));
 	cursor: pointer;
 }
 
