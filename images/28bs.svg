@@ -12,7 +12,7 @@
 
       .cls-2 {
         font-family: TimesNewRomanPS-BoldMT, 'Times New Roman';
-        font-size: 212.37px;
+        font-size: 200px;
         font-weight: 700;
       }
     </style>
